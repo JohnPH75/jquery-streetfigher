@@ -1,50 +1,78 @@
 body {
 	background-color: black;
+	font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 .main {
-  background-color: white;
-  margin-top: 110px;
-  padding-left: 100px;
-  min-width: 1200px;
-  height: 500px;
-  position: relative;
-  z-index: 1;
-}
-.ryu {
-    width: 659px;
-    height: 494px;
+	background: white;
+	margin-top: 110px;
+	min-width: 1200px;
+	padding-left: 100px;
+	min-height: 500px;
+	position: relative;
 }
 
-.ryu-ready, .ryu-still, .ryu-throwing {
-  width: 659px;
-  height: 494px;
+.hadouken, .ryu-cool, .ryu-ready, .ryu-still, .ryu-throwing {
+	background-repeat: no-repeat;
+}
+	
+.hadouken {
+	background-image: url('../images/hadouken.gif');
+	width: 156px;	
+	height: 90px;
+	position: relative;
+	top: 167px;
+	left: -212px;
+	z-index: 10;
+	float: left;
+	display:none;
 }
 
-.ryu-ready, .ryu-throwing {
-  display: none;
-} 
+.ryu-container, .ryu {
+	float:left;
+}
 
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+	width: 659px;
+	height: 494px;
+}
+
+.ryu-ready, .ryu-throwing, .ryu-cool {
+	display: none;
+}	
+
+.ryu-cool {
+	background-image: url('../images/ryu-cool.gif');
+}
 .ryu-ready {
-  background-image: url('../images/ryu-ready-position.gif');
+	background-image: url('../images/ryu-ready-position.gif');
 }
-.hadouken, .ryu-ready, .ryu-still, .ryu-throwing {
-  background-repeat: no-repeat;
-}
+
 .ryu-still {
-  background-image: url('../images/ryu-standing-still.png');
+	background-image: url('../images/ryu-standing-still.png');
 }
 
 .ryu-throwing {
-  background-image: url('../images/ryu-throwing-hadouken.png');
+	background-image: url('../images/ryu-throwing-hadouken.png');
 }
-.hadouken {
-  background-image: url('../images/hadouken.gif');
-  width: 156px; 
-  height: 90px;
-  display: none;
-  position: absolute;
-  z-index: 10;
-  top: 167px;
-  left: 520px;
-  float: left;
+
+.text-content{
+	position: absolute;
+	left: 650px;
+	height: 425px;
+	width: 600px;
+	padding-top: 75px;
+}
+.how-to {
+}
+
+.how-to p {
+	width: 50%;
+	color: black;
+	font-size: 24px;
+	line-height: 45px;
+}
+
+.how-to p + p {
+	margin-left: 275px;
 }
